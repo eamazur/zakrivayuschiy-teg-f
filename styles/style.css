@@ -239,8 +239,10 @@
   
 }
 
-.like-icon {
-  block-size: 36px;
+.card__button-block {
+  display: flex;
+  justify-content: end;
+  gap: 6px;
 }
 
 .button {
@@ -249,6 +251,51 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  padding: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button-with-text {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.button-with-text:focus-visible {
+  box-shadow:  2px 2px var(--main-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.button-with-text::before {
+  content: "";
+  block-size: 100%;
+  inline-size: 100%;
+  position: absolute;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 0;
+}
+
+.button-with-text:hover::before {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-with-text:hover {
+  color: var(--background-color);
+  transition: color 0.5s ease-in-out;
+}
+
+.card__icon-button {
+  border: none;
+}
+
+.like-icon {
+  block-size: 36px;
 }
 
 .card__like-button {
@@ -258,13 +305,13 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   block-size: 38px;
-  padding: 0;
 }
 
 .button__text {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .like-button__text {
@@ -294,6 +341,7 @@
 .footer__icon {
   block-size: 21px;
   color: inherit;
+  z-index: 2;
 }
 
 @media (width <= 376px) {
