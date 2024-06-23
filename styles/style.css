@@ -284,7 +284,6 @@
 
 .button-with-text {
   position: relative;
-  border: none;
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   border: 2px solid var(--main-color);
@@ -313,7 +312,6 @@
 }
 
 .card__icon-button {
-  border: none;
   border: solid 2px transparent;
   block-size: 38px;
   transition: border 0.3s ease;
