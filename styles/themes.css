@@ -12,6 +12,7 @@
   --background-stripe-color: 0, 0, 0;
   --background-gradient-start: #007F0C;
   --background-gradient-end: #004306;
+  --button-text-color:var(--main-color);
 }
 
 :root.theme-light {
@@ -28,6 +29,7 @@
     --background-stripe-color: 0, 0, 0;
     --background-gradient-start: #007F0C;
     --background-gradient-end: #004306;
+    --button-text-color:var(--main-color);
   }
 }
 
