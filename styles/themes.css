@@ -32,10 +32,3 @@
     --button-text-color:var(--main-color);
   }
 }
-
-@media (prefers-color-scheme: light) {
-  :root.theme-auto {
-    --background-color: #fff;
-    --main-color: #000;
-  }
-}
